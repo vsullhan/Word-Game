@@ -1,0 +1,35 @@
+<!-- Purpose: This HTML file contains the homepage html contents. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Word Game Home Page</title>
+    <link id="cssFile" rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+    <div id="intro" class="form-header">What  would  you  like  to  do?</div>
+
+    <div id="leaderboardContainer" class="form-container">
+        <div id="displayRecords">
+            <div id="SPRecord1">High  Score:  </div>
+            <div id="SPRecord2">Most  Rounds  Played:  </div>
+            <div id="MPRecord1">Wins:  </div>
+            <div id="MPRecord2">Losses:  </div>
+        </div>
+        <div id = "leaderboardButton">
+            <input onclick="redirToLBPage()" type="submit" id="LBPageButton" value="Go  To  LeaderBoard">
+        </div>
+    </div>
+
+    <div id="gameModesBox">
+        <input onclick="redirToSetup('SP1')" type="submit" id="SPMode1Button" value="Hot Potato">
+        <input onclick="redirToSetup('SP2')" type="submit" id="SPMode2Button" value="Survival">
+        <input onclick="redirToSetup('MP1')" type="submit" id="MPMode1Button" value="Multiplayer">
+        <input onclick="redirToSetup('MP2')" type="submit" id="MPMode2Button" value="Help Page">
+    </div>
+
+    <script src="./js/HPfunctions.js"></script>
+</body>
+</html>

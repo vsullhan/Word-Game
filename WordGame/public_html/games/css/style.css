@@ -1,0 +1,112 @@
+/* This is CSS for multiPlayer1.html, singlePlayer1.html, and singlePlayer2.html. Employing Flexbox,
+it centers elements both vertically and horizontally in a column layout and applies a background image
+covering the entire viewport. Specific sections like '#substrDispSection', '#timerDisplay', '#notif',
+'#pointsDisplay', '#substr', '#inputSection', '#wordInput', and '#submitWord' receive unique stylings
+such as centered text, background gradients, box shadows, animations ('fadeInOut'), and transitions
+for an interactive and visually appealing user experience.  */
+
+@font-face {
+    font-family: 'Arcade Classic';
+    src: url('../../fonts/ARCADECLASSIC.ttf') format('truetype');
+  }
+
+  body {
+    font-family: 'Arcade Classic', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; 
+    margin: 0; 
+    padding: 0; 
+    background-image: url('../../img/background.png');
+    background-size: cover;
+  }
+  
+
+  #substrDispSection {
+    text-align: center;
+    margin-top: 30px;
+    padding: 50px;
+    max-width: 80%; 
+    background: linear-gradient(135deg, lightgray, rgba(255, 0, 255, 0.192));
+    border-radius:20px;
+  }
+  
+
+  #timerDisplay {
+    font-size: 28px; 
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: lightgray;
+  }
+  
+  #notif {
+    background-color: black; 
+    padding: 12px; 
+    margin-bottom: 25px; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: lightgrey; 
+    animation: fadeInOut 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  #pointsDisplay {
+    font-size: 20px;
+    color: black;
+  }
+
+  #substr {
+    font-style: italic;
+    color: black; 
+  }
+  
+  #inputSection {
+    margin-top: 25px; 
+    text-align: center;
+    width: 80%; 
+    max-width: 400px;
+    color:lightgrey;
+  }
+
+  label {
+    font-weight: bold;
+    color: black; 
+  }
+
+  #wordInput {
+    padding: 10px; 
+    margin: 8px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+  }
+
+  #submitWord {
+    padding: 10px 20px;
+    background-color: black; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: 'Arcade Classic';
+  }
+  
+  #submitWord:hover {
+    background-color: #333;
+    color: white;
+    transform: scale(1.05);  
+  }
+  
+#inputSection label {
+  color:lightgrey;
+}

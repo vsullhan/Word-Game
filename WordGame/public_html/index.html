@@ -1,0 +1,62 @@
+<!-- Purpose: This HTML file contains the login page for our project. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Word Game</title>
+    <link id="cssFile" rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+    <div id="header">
+        <h1>Word Game</h1>
+    </div>
+    <br>
+    <!--DO NOT REMOVE-->
+    <div id="saucer1"></div>
+    <div id="saucer2"></div>
+    <div id="saucer3"></div>
+    <div id="saucer4"></div>
+    <div id="saucer5"></div>
+    <!--These are for animation purposes-->
+
+    <!--Change to look nicer later -->
+    <div id="LoginStuff">
+        <div id="Login">Login</div>
+        <hr>
+        <div id="Username" class="inputs">
+            <label for="usernm">Username: </label>
+            <input id="usernm" name="usernm" type="text">
+        </div>
+
+        <div id="Pwd" class="inputs">
+            <label for="pwd">Password: </label>
+            <input id="pwd" name="pwd" type="password">
+        </div>
+
+        <input onclick="login();" id="LoginButton" type="submit" value="Login">
+    </div>
+    <br>
+
+    <div id=CreateUserStuff>
+        <div id="CreateUser">Create User</div>
+        <hr>
+        <div id="Username2" class="inputs">
+            <label for="usernm2">Username: </label>
+            <input id="usernm2" name="usernm2" type="text">
+        </div>
+
+        <div id="Pwd2" class="inputs">
+            <label for="pwd2">Password: </label>
+            <input id="pwd2" name="pwd2" type="password" placeholder="Don't use real passwords">
+        </div>
+
+        <input onclick="addUser();" id="AddUserButton" type="submit" value="Add  User">
+    </div>
+    <script src="./js/functions.js">
+    </script>
+</body>
+
+</html>

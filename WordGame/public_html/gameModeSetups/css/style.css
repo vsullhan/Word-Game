@@ -1,0 +1,64 @@
+/* CSS for SPMode1Setup and SP2ModeSetup.This page uses of a custom font named 'Arcade Classic' 
+via '@font-face, the body establishes flexbox to center content vertically and horizontally 
+within a column format while maintaining a background image with cover scaling. 
+Specific styles are applied to elements related to difficulty selection */
+
+@font-face {
+    font-family: 'Arcade Classic';
+    /*Use this font for the game, but not necessarily globally*/
+    src: url(../../fonts/ARCADECLASSIC.ttf) format('truetype');
+    /*  The url needs to change to a server directory eventually.
+        Add this later when the we upload this to a proper
+        server (if we're going to), or don't if it still works.*/
+}
+
+body {
+    font-family: 'Arcade Classic', sans-serif;
+    background-color: #ffffffc2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    background-image: url('../../img/background.png');
+    background-size: cover; 
+}
+
+#difficultyContainer {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#difficultyHeader {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: lightgrey;
+}
+
+#difficultyOptions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#difficultyOptions button {
+    margin: 0 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, lightgray, grey);
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Arcade Classic';
+}
+
+#difficultyOptions button:hover{
+    transform: scale(1.05);
+
+}

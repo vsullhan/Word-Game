@@ -1,0 +1,98 @@
+/* This CSS code customizes the appearance of Word Game's Help Page. The design is consistent
+with the CSS elements of other pages and implements the same background as well as the same fonts. 
+Flexbox is used to center contents both vertically and horizontally, enusring a clean presentation. 
+Classes and ids are used to establish containers and buttons. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Arcade Classic';
+    /*Use this font for the game, but not necessarily globally*/
+    src: url(../fonts/ARCADECLASSIC.ttf) format('truetype');
+    /*  The url needs to change to a server directory eventually.
+        Add this later when the we upload this to a proper
+        server (if we're going to), or don't if it still works.*/
+}
+
+body {
+    font-family: 'Arcade Classic', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    overflow: hidden;
+    background-image: url('../img/background.png');
+    background-size: cover; 
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    background: linear-gradient(135deg, lightgray, rgba(255, 0, 255, 0.192));
+    padding: 20px;
+    border-radius: 8px;
+    overflow-y: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .helpText {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+
+  /* ensuring screen is adjusted on other devices*/
+  @media screen and (max-width: 600px) {
+    .container {
+      width: 90%; 
+    }
+  }
+  
+  #redirHomeButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Arcade Classic';
+    margin-top: 20px;
+    display: inline-block;
+}
+
+#redirHomeButton:hover {
+    transform: scale(1.05)
+}
+
+#intro{
+    margin-top:30px;
+    font-size: 50px;
+    color: lightgray;
+}
+
+#SPMode1Button,
+#SPMode2Button, #MPMode1Button {
+  font-family: 'Arcade Classic';
+  background: linear-gradient(135deg, lightgray, grey);
+  border-radius: 5px;
+  margin-bottom: 10px; 
+  display: block; 
+  width: 80%;
+  max-width: 250px; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+#submitWord {
+    background-color: black;
+    color: white;
+    font-family: 'Arcade Classic';
+}

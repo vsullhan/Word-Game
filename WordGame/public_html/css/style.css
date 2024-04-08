@@ -1,0 +1,282 @@
+/* This CSS code customizes the appearance of Word Game's Index and Home page. Specific elements 
+like headers, form containers, and saucer animations receive distinct formatting and positioning.
+Additionally, button styles, leaderboard displays, and text elements are customized.  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Universally gives a margin & padding to all elements for convenience,
+as well as sets the sizing within the border of the web browser*/
+
+@font-face {
+    font-family: 'Arcade Classic';
+    /*Use this font for the game, but not necessarily globally*/
+    src: url(../fonts/ARCADECLASSIC.ttf) format('truetype');
+    /*  The url needs to change to a server directory eventually.
+        Add this later when the we upload this to a proper
+        server (if we're going to), or don't if it still works.*/
+}
+
+body {
+    font-family: 'Arcade Classic', sans-serif;
+    background-color: #ffffffc2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    background-image: url('../img/background.png');
+    background-size: cover; 
+}
+
+#header {
+    position: relative;
+    color: #fff;
+    font-size: 4em;
+    top: 100px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: lightgrey;
+}
+
+hr {
+    border-bottom: 2px dotted lightgrey;
+    margin-bottom: 15px;
+}
+
+#LoginStuff {
+    position: relative;
+    top: 200px;
+    display: inline-block;
+    border: solid;
+    padding: 20px;
+}
+
+#LoginStuff #Login {
+    position: relative;
+    font-size: 1.5em;
+    left: 40%;
+}
+
+#CreateUserStuff {
+    position: relative;
+    top: 200px;
+    display: inline-block;
+    border: solid;
+    padding: 20px;
+}
+
+#CreateUserStuff #CreateUser {
+
+    position: relative;
+    font-size: 1.5em;
+    left: 25%;
+}
+
+/*Animation for saucers */
+
+#saucer1 {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    border: 4px solid #000;
+    width: 50px;
+    animation: left-to-right 5s linear infinite
+}
+
+#saucer2 {
+    position: absolute;
+    border: 4px solid #000;
+    width: 50px;
+    top: 25%;
+    right:0;
+    animation: right-to-left 1s linear infinite
+}
+
+#saucer3 {
+    position: absolute;
+    border: 4px solid #000;
+    width: 50px;
+    top: 45%;
+    left: 0;
+    animation: left-to-right 2s linear infinite
+}
+
+#saucer4 {
+    position: absolute;
+    border: 4px solid #000;
+    width: 50px;
+    top: 65%;
+    right: 0;
+    animation: right-to-left 4s linear infinite
+}
+
+#saucer5 {
+    position: absolute;
+    border: 4px solid #000;
+    width: 50px;
+    top: 90%;
+    left: 0;
+    animation: left-to-right 10s linear infinite
+}
+
+/* key frame animations, they use the transform property with translateX to move horizontally */
+
+@keyframes left-to-right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(200vh);
+    }
+}
+
+@keyframes right-to-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200vh);
+    }
+}  
+
+.form-container {
+    width: 80%;
+    max-width: 400px; 
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: calc(100% - 22px); 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+#LoginStuff, #CreateUserStuff {
+    position: relative;
+    top: 100px;
+    display: inline-block;
+    border: solid;
+    padding: 20px;
+    margin-bottom: 30px; 
+}
+
+#Login, #CreateUser {
+    color:white;
+}
+
+
+/* ensure the screen adjusts based on corresponding device */
+
+@media (max-width: 600px) { 
+    .form-container {
+        width: 90%; 
+        max-width: none;
+    }
+}
+
+#intro {
+    font-size: 48px;
+    margin-top: 50px;
+    color:white;
+}
+
+#leaderboardContainer {
+    width: 80%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: linear-gradient(135deg, lightgray, rgba(255, 0, 255, 0.192));
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#gameModesBox {
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 20px;;
+}
+
+#gameModesBox input[type="submit"] {
+    display: block;
+    margin: 10px auto;
+    width: 70%;
+    padding: 10px;
+    border: 2px solid black;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#LoginButton, #AddUserButton {
+    margin-top:10px;
+    font-family: 'Arcade Classic';
+}
+
+#LoginButton:hover, #AddUserButton:hover {
+    transform: scale(1.05);
+}
+
+#pwd, #pwd2 {
+    margin-top: 5px;
+}
+
+#SPMode1Button, #SPMode2Button, #MPMode1Button, #MPMode2Button{
+    font-family: 'Arcade Classic';
+    background: linear-gradient(135deg, lightgray, grey);
+    border-radius: 5px;
+
+}
+
+#SPMode1Button:hover, #SPMode2Button:hover, #MPMode1Button:hover, #MPMode2Button:hover {
+    transform: scale(1.05);  
+  }
+
+#displayRecords {
+    font-size: 20px;
+    margin:5px;
+}
+
+#Username label,
+#Pwd label, #Username2 label, #Pwd2 label {
+    color: white;
+}
+
+#LBPageButton {
+    font-family: 'Arcade Classic';
+    font-size: 17px;
+    background: linear-gradient(135deg, lightgray, grey);
+    border-radius: 5px;
+}
+
+#LBPageButton:hover {
+    transform: scale(1.05);  
+}

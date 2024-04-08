@@ -1,0 +1,39 @@
+<!-- Purpose: This HTML file contains the multiplayer game html contents. -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "utf-8">
+        <title>Multi Player 1</title>
+        <link id="cssFile" rel="stylesheet" type="text/css" href="./css/style.css">
+    </head>
+    
+    <body>
+        <div id = "substrDispSection">
+            <!--Can add whatever needs to be displayed as needed-->
+            <div id="otherscore">Opponent Score: </div>
+
+            <div id = "timerDisplay"></div>
+            
+            <div id = "notif"></div>
+
+            <div id = "pointsDisplay">Points: 0</div>
+            
+            <div id = "substr">Substring: </div>
+        </div>
+        
+        <div id = "inputSection">
+            <label for = "wordInput">Enter  a  word  containing  the  substring: </label>
+            <input id = "wordInput" name = "wordInput" type = "text">
+            <input id = "submitWord" type = "submit" value = "Enter" onclick="guessWord()">
+        </div>
+        <button id="exitButton" disabled="true" onclick="redirectHome()">
+            Exit Game
+        </button>
+
+        <script src = "../gameModeSetups/WaitingRooms/js/app.js => {
+            
+        }">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+/* Purpose: This file contains the styling for the leaderboard html page. */
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arcade Classic', sans-serif;
+    color: black;
+    background-color: #ffffffc2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-image: url('../img/background.png');
+    background-size: cover; 
+}
+
+div {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#winsLeaderboard,
+#pointsLeaderboard,
+#roundsLeaderboard {
+    width: 80%;
+    max-width: 400px;
+    height: 200px; 
+    padding: 20px;
+    border: 2px solid #0c0000;
+    border-radius: 5px;
+    background: linear-gradient(135deg, lightgray, rgba(255, 0, 255, 0.192));
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: auto; 
+}
+
+#multiplayerWins, #mostPoints, #mostRounds {
+    color: white;
+    margin-top: 20px;
+}

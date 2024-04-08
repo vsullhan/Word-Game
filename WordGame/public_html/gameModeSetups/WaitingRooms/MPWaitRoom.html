@@ -1,0 +1,38 @@
+<!-- Purpose: This HTML file contains the multiplayer waiting room contents. -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "utf-8">
+        <title>Host Waiting Room</title>
+        <link id="cssFile" rel="stylesheet" type="text/css" href="./css/style.css">
+    </head>
+    
+    <body>
+        <div id = "Welcome">
+            Welcome to the Waiting Room! Please wait for the game to begin.
+        </div>
+
+        <div id = "PlayersInLobby"></div>
+        
+
+        <div id = "substrDispSection">
+            <!--Can add whatever needs to be displayed as needed-->
+            <div id = "timerDisplay"></div>
+            
+            <div id = "notif"></div>
+
+            
+            <div id = "substr">Substring: </div>
+        </div>
+        
+        <div id = "inputSection">
+            <label for = "wordInput">Enter a word containing the substring: </label>
+            <input id = "wordInput" name = "wordInput" type = "text">
+            <input id = "submitWord" type = "submit" value = "Enter">
+        </div>
+        <script src="https://cdn.socket.io/4.7.2/socket.io.min.js" integrity="sha384-mZLF4UVrpi/QTWPA7BjNPEnkIfRFn4ZEO3Qt/HFklTJBj/gBOV8G3HcKn4NfQblz" crossorigin="anonymous"></script>
+        <script src = "./js/app.js">
+        </script>
+    </body>
+</html>

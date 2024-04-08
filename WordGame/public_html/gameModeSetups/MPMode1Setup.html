@@ -1,0 +1,24 @@
+<!-- Purpose: This HTML file contains the multiplayer setup page. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MP Mode 1 Setup</title>
+    <link id="cssFile" rel="stylesheet" type="text/css" href="css/MPMode1Setup.css">
+</head>
+
+<body>
+    <div id="joinGame">
+        <div>
+            Join/Create Game (Game created if no other session exists):
+        </div>
+        <div id="joinGameBtn">
+        <input onclick="joinGame();" type="submit" value="Join a Game">
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js" integrity="sha384-mZLF4UVrpi/QTWPA7BjNPEnkIfRFn4ZEO3Qt/HFklTJBj/gBOV8G3HcKn4NfQblz" crossorigin="anonymous"></script>
+    <script src='./js/functions.js'></script>
+</body>
+</html>

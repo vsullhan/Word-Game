@@ -1,0 +1,63 @@
+<!-- Purpose: This HTML file contains the help page html contents. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Help Page</title>
+    <link id="cssFile" rel="stylesheet" type="text/css" href="./css/helpPage.css">
+</head>
+
+<body>
+    <div id="intro" class="form-header">Help Page</div>
+
+    <div class="container">
+    <div class = "helpText">In order to start a game, you need to click one of these buttons:</div>
+    
+    <div id="gameModesBox">
+        <input type="submit" id="SPMode1Button" value="Hot  Potato">
+        <input type="submit" id="SPMode2Button" value="Survival">
+        <input type="submit" id="MPMode1Button" value="Multiplayer">
+
+    </div>
+ 
+    <div class = "helpText">There are two single player modes. In the first mode, you have ten rounds to guess 
+        a word from a given substring in as little time as possible, the less time you take to get a word, the more 
+        points you get. In the second mode, you keep playing until you are unable to guess a word. Once you fail to 
+        guess a word in the given amount of time, the game ends.
+    </div>
+
+    <div class = "helpText">After you click one of the above buttons, you will be asked to select a difficulty. 
+        In Easy mode, you get 10 seconds to guess a word containing a two letter long substring. In Medium mode, 
+        you are given 7.5 seconds to guess a word containing a three letter long substring. In Hard mode, you 
+        get 5 seconds to guess a word containing a four letter long substring
+    </div>
+
+    <div class = "helpText">Once you start the game, you will see the amount of time you have remaining, your 
+        current score/round, and the substring, as well as this:
+    </div>
+
+    <div id = "inputSection">
+        <label for = "wordInput">Enter  a  word  containing  the  substring: </label>
+        <input id = "wordInput" name = "wordInput" type = "text">
+        <input id = "submitWord" type = "submit" value = "Enter">
+    </div>
+
+    <div class = "helpText">Type your guess into the input section and hit the enter button on your keyboard 
+        Once you have your guess. If your guess is not a word, you will be told so and the timer will keep 
+        going down.
+    </div>
+
+    <div class = "helpText">Once the game is over, you will be directed to the game over page, from which you 
+        can get back to the home page.
+    </div>
+
+    </div>
+
+    <div id="retHomeBox">
+        <input onclick = "redirToHome();" type="submit" id="redirHomeButton" value="Return to Home Page">
+    </div>
+
+    <script src="./js/HelpPfunctions.js"></script>
+</body>
+</html>
